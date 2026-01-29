@@ -1,0 +1,18 @@
+name = "mikrodius-api"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+
+[vars]
+JWT_SECRET = "Xk9mP2qR5sT8vW1yZ4bE7hJ0nL3oQ6rU9wA2cF5gI8kM"
+GOOGLE_CLIENT_ID = "992201247644-5ovrdiajr98guul4qepoveundcuggv7n.apps.googleusercontent.com"
+GOOGLE_CLIENT_SECRET = "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"
+GOOGLE_REDIRECT_URI = "https://api.testnet.box/auth/google/callback"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "mikrodius"
+database_id = "c974fedd-4cbf-4669-b135-5c4924fd7429"
+
+[[kv_namespaces]]
+binding = "CACHE"
+id = "f177bc892bc04a0fa15c0a257138bd57"

@@ -1,0 +1,21 @@
+{
+    "project": {
+        "name": "mikrodius",
+        "domain": "testnet.box"
+    },
+    "cloudflare": {
+        "d1_database_id": "c974fedd-4cbf-4669-b135-5c4924fd7429",
+        "d1_database_name": "mikrodius",
+        "kv_namespace_id": "f177bc892bc04a0fa15c0a257138bd57"
+    },
+    "secrets": {
+        "jwt_secret": "Xk9mP2qR5sT8vW1yZ4bE7hJ0nL3oQ6rU9wA2cF5gI8kM",
+        "google_client_id": "992201247644-5ovrdiajr98guul4qepoveundcuggv7n.apps.googleusercontent.com",
+        "google_client_secret": "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"
+    },
+    "urls": {
+        "api": "https://api.testnet.box",
+        "web": "https://app.testnet.box",
+        "google_redirect": "https://api.testnet.box/auth/google/callback"
+    }
+}

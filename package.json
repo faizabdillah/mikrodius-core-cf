@@ -1,0 +1,30 @@
+{
+    "name": "mikrodius-core",
+    "private": true,
+    "workspaces": [
+        "apps/*",
+        "packages/*"
+    ],
+    "scripts": {
+        "setup": "bun run scripts/setup.ts",
+        "setup:deploy": "bun run scripts/setup.ts deploy",
+        "setup:migrate": "bun run scripts/setup.ts migrate",
+        "setup:domains": "bun run scripts/setup.ts domains",
+        "dev:api": "bun run --cwd apps/api dev",
+        "dev:web": "bun run --cwd apps/web dev",
+        "build:web": "bun run --cwd apps/web build",
+        "db:generate": "bun run --cwd packages/db generate",
+        "db:migrate:local": "wrangler d1 execute mikrodius-db --local --file=packages/db/migrations/0001_init.sql",
+        "db:migrate:remote": "wrangler d1 execute mikrodius-db --remote --file=packages/db/migrations/0001_init.sql",
+        "db:seed:local": "wrangler d1 execute mikrodius-db --local --file=packages/db/seed.sql",
+        "db:seed:remote": "wrangler d1 execute mikrodius-db --remote --file=packages/db/seed.sql",
+        "deploy:api": "cd apps/api && wrangler deploy",
+        "deploy:web": "cd apps/web && bun run build && wrangler pages deploy dist --project-name=mikrodius-web",
+        "deploy": "bun run deploy:api && bun run deploy:web"
+    },
+    "devDependencies": {
+        "@types/bun": "latest",
+        "typescript": "^5.7.0",
+        "wrangler": "^4.61.0"
+    }
+}
